@@ -1,0 +1,257 @@
+/* ==========================
+   ESTILOS GENERALES
+========================== */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+header{
+    background-color: #0d6efd;
+    color: white;
+    padding: 20px;
+}
+
+/* Flexbox para el menú */
+
+.menu{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 15px;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.menu a:hover{
+    color: #ffd43b;
+}
+
+/* ==========================
+   SECCIONES
+========================== */
+
+section{
+    padding: 50px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+section h2{
+    margin-bottom: 20px;
+    color: #0d6efd;
+}
+
+/* ==========================
+   HERO
+========================== */
+
+#hero{
+    text-align: center;
+    padding: 80px 20px;
+}
+
+#hero h1{
+    font-size: 40px;
+    color: #0d6efd;
+
+    animation: aparecer 1s ease;
+}
+
+#hero p{
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* ==========================
+   GRID PROYECTOS
+========================== */
+
+.grid-proyectos{
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 20px;
+
+}
+
+/* ==========================
+   TARJETAS
+========================== */
+
+.tarjeta{
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    transition: .3s;
+
+}
+
+.tarjeta h3{
+
+    margin-bottom: 15px;
+
+}
+
+.tarjeta p{
+
+    margin-bottom: 20px;
+
+}
+
+/* Hover solicitado */
+
+.tarjeta:hover{
+
+    transform: scale(1.05);
+
+    box-shadow: 0px 8px 20px rgba(0,0,0,.2);
+
+}
+
+button{
+
+    padding: 10px 18px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background-color: #0d6efd;
+
+    color: white;
+
+    cursor: pointer;
+
+}
+
+button:hover{
+
+    background-color: #084db8;
+
+}
+
+/* ==========================
+   CONTACTO
+========================== */
+
+#contacto{
+
+    text-align: center;
+
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+/* Flexbox */
+
+footer{
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-direction: column;
+
+    background: #222;
+
+    color: white;
+
+    padding: 25px;
+
+}
+
+/* ==========================
+         ANIMACION
+========================== */
+
+@keyframes aparecer{
+
+    from{
+
+        opacity: 0;
+
+        transform: translateY(40px);
+
+    }
+
+    to{
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/* ==========================
+        RESPONSIVE
+========================== */
+
+@media (max-width:768px){
+
+    body{
+
+        background-color:#e2e8f0;
+
+    }
+
+    /* Menú vertical */
+
+    .menu{
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 15px;
+
+    }
+
+    /* Grid en una sola columna */
+
+    .grid-proyectos{
+
+        grid-template-columns:1fr;
+
+    }
+
+    #hero h1{
+
+        font-size:30px;
+
+    }
+
+}
